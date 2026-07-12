@@ -17,12 +17,12 @@ Status: Phase 0, Foundation, in progress
 ## Repository structure
 
 edutrack-by-sharpbeegh/
-  .github/workflows/       CI/CD pipelines
-  docs/                    Operational documentation
-  src/                     Frontend application, added in Phase 0 Task 3
-  supabase/                Migrations, functions, config, added in Phase 0 Task 2
-  .env.example             Client-safe environment variable template
-  README.md
+.github/workflows/ CI/CD pipelines
+docs/ Operational documentation
+src/ Frontend application, added in Phase 0 Task 3
+supabase/ Migrations, functions, config, added in Phase 0 Task 2
+.env.example Client-safe environment variable template
+README.md
 
 ## Environments
 

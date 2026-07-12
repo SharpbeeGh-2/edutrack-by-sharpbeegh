@@ -4,12 +4,12 @@ Per 11_Deployment_And_Operations.docx, Section 6.
 
 ## Branches
 
-| Branch | Purpose | Deploys to |
-|---|---|---|
-| main | Production-ready code only | Production |
-| develop | Integration branch — all feature work merges here first | Staging |
-| feature/<name> | One branch per feature/task (e.g. feature/student-admissions) | Preview (Vercel) |
-| hotfix/<name> | Emergency production fixes | Production (after approval) |
+| Branch         | Purpose                                                       | Deploys to                  |
+| -------------- | ------------------------------------------------------------- | --------------------------- |
+| main           | Production-ready code only                                    | Production                  |
+| develop        | Integration branch — all feature work merges here first       | Staging                     |
+| feature/<name> | One branch per feature/task (e.g. feature/student-admissions) | Preview (Vercel)            |
+| hotfix/<name>  | Emergency production fixes                                    | Production (after approval) |
 
 ## Rules
 

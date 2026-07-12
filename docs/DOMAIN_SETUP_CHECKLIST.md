@@ -4,10 +4,10 @@ No domain is registered yet. The original spec (11_Deployment_And_Operations.doc
 
 ## Suggested subdomain structure (once a root domain is chosen)
 
-| Subdomain | Purpose |
-|---|---|
-| www.<domain> | Marketing site |
-| app.<domain> | School Portal + Super Admin Portal (React app) |
+| Subdomain    | Purpose                                                                |
+| ------------ | ---------------------------------------------------------------------- |
+| www.<domain> | Marketing site                                                         |
+| app.<domain> | School Portal + Super Admin Portal (React app)                         |
 | api.<domain> | (optional) custom domain for Supabase Edge Functions, if desired later |
 
 Note: the original spec split app. and admin. into separate subdomains for the two portals. Since routing is already isolated at /school/* vs /super-admin/* inside one React app (per 02_System_Architecture.docx), a single app.<domain> covering both is simpler to operate and still fully respects the route-guard isolation rules — recommending this unless there's a reason to keep them physically separate.

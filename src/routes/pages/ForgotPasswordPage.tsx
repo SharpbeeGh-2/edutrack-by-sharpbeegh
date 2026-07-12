@@ -46,17 +46,29 @@ export function ForgotPasswordPage() {
         ) : (
           <form onSubmit={handleSubmit(onSubmit)}>
             <label className="mb-1 block text-body-sm text-gray-600">Email</label>
-            <input type="email" {...register('email')} className="mb-1 w-full rounded-md border border-gray-300 px-3 py-2 text-body-md" />
-            {errors.email && <p className="mb-2 text-body-sm text-danger">{errors.email.message}</p>}
+            <input
+              type="email"
+              {...register('email')}
+              className="mb-1 w-full rounded-md border border-gray-300 px-3 py-2 text-body-md"
+            />
+            {errors.email && (
+              <p className="mb-2 text-body-sm text-danger">{errors.email.message}</p>
+            )}
 
-            <button type="submit" disabled={isSubmitting} className="mt-4 w-full rounded-md bg-primary py-2 text-white disabled:opacity-50">
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="mt-4 w-full rounded-md bg-primary py-2 text-white disabled:opacity-50"
+            >
               {isSubmitting ? 'Sending…' : 'Send reset link'}
             </button>
           </form>
         )}
 
         <p className="mt-4 text-center text-body-sm text-gray-500">
-          <Link to="/login" className="text-primary underline">Back to sign in</Link>
+          <Link to="/login" className="text-primary underline">
+            Back to sign in
+          </Link>
         </p>
       </div>
     </div>

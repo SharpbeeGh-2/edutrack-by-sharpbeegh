@@ -17,5 +17,6 @@ The original spec (`05_Super_Admin_Portal.docx`, Section 20) named Twilio (SMS) 
 ## Action needed
 
 No account exists yet for either recommended provider. Before Phase 0 sign-off, someone needs to:
+
 1. Create an mNotify account and obtain an API key (or confirm Hubtel SMS as the sole provider to start).
 2. Create a Resend account and verify a sending domain (blocked until a domain is registered — see `docs/DOMAIN_SETUP_CHECKLIST.md`).

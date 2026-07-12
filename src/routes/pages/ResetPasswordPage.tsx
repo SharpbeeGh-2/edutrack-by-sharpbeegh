@@ -32,15 +32,28 @@ export function ResetPasswordPage() {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-50 px-4">
-      <form onSubmit={handleSubmit(onSubmit)} className="w-full max-w-sm rounded-lg bg-white p-8 shadow-md">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="w-full max-w-sm rounded-lg bg-white p-8 shadow-md"
+      >
         <div className="mb-6">
           <BrandLogo />
         </div>
         <label className="mb-1 block text-body-sm text-gray-600">New password</label>
-        <input type="password" {...register('password')} className="mb-1 w-full rounded-md border border-gray-300 px-3 py-2 text-body-md" />
-        {errors.password && <p className="mb-4 text-body-sm text-danger">{errors.password.message}</p>}
+        <input
+          type="password"
+          {...register('password')}
+          className="mb-1 w-full rounded-md border border-gray-300 px-3 py-2 text-body-md"
+        />
+        {errors.password && (
+          <p className="mb-4 text-body-sm text-danger">{errors.password.message}</p>
+        )}
 
-        <button type="submit" disabled={isSubmitting} className="mt-2 w-full rounded-md bg-primary py-2 text-white disabled:opacity-50">
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className="mt-2 w-full rounded-md bg-primary py-2 text-white disabled:opacity-50"
+        >
           {isSubmitting ? 'Updating…' : 'Update password'}
         </button>
       </form>

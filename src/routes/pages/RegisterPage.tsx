@@ -71,36 +71,68 @@ export function RegisterPage() {
         </div>
 
         <label className="mb-1 block text-body-sm text-gray-600">School name</label>
-        <input {...register('schoolName')} className="mb-1 w-full rounded-md border border-gray-300 px-3 py-2 text-body-md" />
-        {errors.schoolName && <p className="mb-2 text-body-sm text-danger">{errors.schoolName.message}</p>}
+        <input
+          {...register('schoolName')}
+          className="mb-1 w-full rounded-md border border-gray-300 px-3 py-2 text-body-md"
+        />
+        {errors.schoolName && (
+          <p className="mb-2 text-body-sm text-danger">{errors.schoolName.message}</p>
+        )}
 
         <div className="mb-1 grid grid-cols-2 gap-2">
           <div>
             <label className="mb-1 block text-body-sm text-gray-600">First name</label>
-            <input {...register('firstName')} className="w-full rounded-md border border-gray-300 px-3 py-2 text-body-md" />
-            {errors.firstName && <p className="text-body-sm text-danger">{errors.firstName.message}</p>}
+            <input
+              {...register('firstName')}
+              className="w-full rounded-md border border-gray-300 px-3 py-2 text-body-md"
+            />
+            {errors.firstName && (
+              <p className="text-body-sm text-danger">{errors.firstName.message}</p>
+            )}
           </div>
           <div>
             <label className="mb-1 block text-body-sm text-gray-600">Last name</label>
-            <input {...register('lastName')} className="w-full rounded-md border border-gray-300 px-3 py-2 text-body-md" />
-            {errors.lastName && <p className="text-body-sm text-danger">{errors.lastName.message}</p>}
+            <input
+              {...register('lastName')}
+              className="w-full rounded-md border border-gray-300 px-3 py-2 text-body-md"
+            />
+            {errors.lastName && (
+              <p className="text-body-sm text-danger">{errors.lastName.message}</p>
+            )}
           </div>
         </div>
 
         <label className="mb-1 mt-2 block text-body-sm text-gray-600">Email</label>
-        <input type="email" {...register('email')} className="mb-1 w-full rounded-md border border-gray-300 px-3 py-2 text-body-md" />
+        <input
+          type="email"
+          {...register('email')}
+          className="mb-1 w-full rounded-md border border-gray-300 px-3 py-2 text-body-md"
+        />
         {errors.email && <p className="mb-2 text-body-sm text-danger">{errors.email.message}</p>}
 
         <label className="mb-1 block text-body-sm text-gray-600">Password</label>
-        <input type="password" {...register('password')} className="mb-1 w-full rounded-md border border-gray-300 px-3 py-2 text-body-md" />
-        {errors.password && <p className="mb-4 text-body-sm text-danger">{errors.password.message}</p>}
+        <input
+          type="password"
+          {...register('password')}
+          className="mb-1 w-full rounded-md border border-gray-300 px-3 py-2 text-body-md"
+        />
+        {errors.password && (
+          <p className="mb-4 text-body-sm text-danger">{errors.password.message}</p>
+        )}
 
-        <button type="submit" disabled={isSubmitting} className="mt-2 w-full rounded-md bg-primary py-2 text-white disabled:opacity-50">
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className="mt-2 w-full rounded-md bg-primary py-2 text-white disabled:opacity-50"
+        >
           {isSubmitting ? 'Creating account…' : 'Create account'}
         </button>
 
         <p className="mt-4 text-center text-body-sm text-gray-500">
-          Already have an account? <Link to="/login" className="text-primary underline">Sign in</Link>
+          Already have an account?{' '}
+          <Link to="/login" className="text-primary underline">
+            Sign in
+          </Link>
         </p>
       </form>
     </div>
