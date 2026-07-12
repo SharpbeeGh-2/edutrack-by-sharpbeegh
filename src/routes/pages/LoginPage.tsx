@@ -5,6 +5,7 @@ import toast from 'react-hot-toast'
 import { Link, useNavigate } from 'react-router-dom'
 import { supabase } from '../../services/supabase'
 import { BrandLogo } from '../../components/BrandLogo'
+import { GoogleAuthButton } from '../../components/GoogleAuthButton'
 
 const loginSchema = z.object({
   email: z.string().email('Enter a valid email address'),
@@ -39,6 +40,15 @@ export function LoginPage() {
       >
         <div className="mb-6">
           <BrandLogo />
+        </div>
+
+        <div className="mb-4">
+          <GoogleAuthButton label="Sign in with Google" />
+        </div>
+        <div className="mb-4 flex items-center gap-3">
+          <div className="h-px flex-1 bg-gray-200" />
+          <span className="text-body-sm text-gray-400">or</span>
+          <div className="h-px flex-1 bg-gray-200" />
         </div>
 
         <label className="mb-1 block text-body-sm text-gray-600">Email</label>
